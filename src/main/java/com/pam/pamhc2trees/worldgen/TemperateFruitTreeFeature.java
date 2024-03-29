@@ -28,7 +28,7 @@ public class TemperateFruitTreeFeature extends Feature<NoFeatureConfig> {
 	@Override
 	public boolean place(IWorld world, ChunkGenerator<? extends GenerationSettings> generator, Random random,
 			BlockPos pos, NoFeatureConfig config) {
-		if (random.nextInt(ChanceConfig.temperatefruittree_chance.get()) != 0
+		if (random.nextInt(100000) != 0
 				|| DimensionConfig.blacklist.get().contains(world.getDimension().getType().getId())
 				|| !DimensionConfig.whitelist.get().contains(world.getDimension().getType().getId()))
 			return false;
